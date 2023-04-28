@@ -1,17 +1,16 @@
-//intialize variables
-let number; 
-let guess;
+let number;
+let numberguess;
 let message;
 
-document.getElementById("checkGuess").onclick = function() { //onclick function 
+document.getElementById("checkGuess").onclick = function () {
   number = Math.floor(Math.random() * 50) + 1;
-  guess = document.getElementById("guess").value;
+  numberguess = document.getElementById("numberguess").value;
   message = document.getElementById("message");
-  if (guess === number) {
-    message.innerHTML = "Congrats!"; //changine innerHTML tag
-  } else if (guess < number) {
-    message.innerHTML = "low guess, try again!";
+  if (numberguess === number) {
+    message.innerHTML = "Correct!";
+  } else if (numberguess < number) {
+    message.innerHTML = "Number too low! Try again";
   } else {
-    message.innerHTML = "high guess, try again!";
+    message.innerHTML = "Number too high! Try again";
   }
 };
